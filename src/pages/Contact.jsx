@@ -6,7 +6,7 @@ import hospitalImage from "../assets/meditrust.png";
 
 const contactDetails = [
   { icon: Phone, title: "Call us", primary: "+234 800 123 4567", secondary: "24/7 emergency support", href: "tel:+2348001234567" },
-  { icon: Mail, title: "Email us", primary: "support@meditrusthospital.com", secondary: "We respond within 24 hours", href: "mailto:support@meditrusthospital.com" },
+  { icon: Mail, title: "Email us", primary: "support@meditrustnigeria.com", secondary: "We respond within 24 hours", href: "mailto:support@meditrustnigeria.com" },
   { icon: MapPin, title: "Visit us", primary: "25 Victoria Island Road", secondary: "Lagos, Nigeria" },
   { icon: Clock, title: "Opening hours", primary: "Open 24 hours daily", secondary: "Every day of the week" },
 ];
