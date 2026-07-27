@@ -53,7 +53,7 @@ const patientsList = [
     name: "Miss Aisha Bello",
     age: 12,
     gender: "Female",
-    phone: "+234 901 234 5678",
+    phone: "+234 901 233 5678",
     email: "aisha.bello@email.com",
     lastVisit: "2025-05-28",
     condition: "Asthma",
