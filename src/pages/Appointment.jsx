@@ -23,6 +23,8 @@ const doctors = [
 ];
 
 const Appointment = () => {
+  const API_URL = import.meta.env.VITE_API_URL;
+
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -41,44 +43,80 @@ const Appointment = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setForm((prev) => ({ ...prev, [name]: value }));
+
+    setForm((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
 
     if (errors[name]) {
-      setErrors((prev) => ({ ...prev, [name]: "" }));
+      setErrors((prev) => ({
+        ...prev,
+        [name]: "",
+      }));
     }
   };
 
   const selectDoctor = (doctorName) => {
-    setForm((prev) => ({ ...prev, doctor: doctorName }));
+    setForm((prev) => ({
+      ...prev,
+      doctor: doctorName,
+    }));
+
     setShowDoctorModal(false);
-    if (errors.doctor) setErrors((prev) => ({ ...prev, doctor: "" }));
+
+    if (errors.doctor) {
+      setErrors((prev) => ({
+        ...prev,
+        doctor: "",
+      }));
+    }
   };
 
   const validateForm = () => {
     const newErrors = {};
 
-    if (!form.fullName.trim()) newErrors.fullName = "Full name is required";
-    if (!form.email || !/\S+@\S+\.\S+/.test(form.email)) newErrors.email = "Valid email is required";
-    if (!form.phone.trim()) newErrors.phone = "Phone number is required";
-    if (!form.department) newErrors.department = "Please select a department";
-    if (!form.doctor) newErrors.doctor = "Please select a doctor";
-    if (!form.appointmentDate) newErrors.appointmentDate = "Please select appointment date";
+    if (!form.fullName.trim())
+      newErrors.fullName = "Full name is required";
+
+    if (!form.email || !/\S+@\S+\.\S+/.test(form.email))
+      newErrors.email = "Valid email is required";
+
+    if (!form.phone.trim())
+      newErrors.phone = "Phone number is required";
+
+    if (!form.department)
+      newErrors.department = "Please select a department";
+
+    if (!form.doctor)
+      newErrors.doctor = "Please select a doctor";
+
+    if (!form.appointmentDate)
+      newErrors.appointmentDate = "Please select appointment date";
 
     setErrors(newErrors);
+
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     setServerError("");
+    setSuccess(false);
 
     if (!validateForm()) return;
+
+    if (!API_URL) {
+      setServerError("Backend URL is not configured.");
+      return;
+    }
 
     try {
       setLoading(true);
 
       const response = await axios.post(
-        "http://localhost:5000/api/appointments",
+        `${API_URL}/api/appointments`,
         form
       );
 
@@ -87,7 +125,6 @@ const Appointment = () => {
       setSuccess(true);
       setErrors({});
 
-      // Reset form
       setForm({
         fullName: "",
         email: "",
@@ -99,8 +136,12 @@ const Appointment = () => {
       });
     } catch (error) {
       console.error(error);
-      const message = error.response?.data?.message || "Failed to book appointment. Please try again.";
-      setServerError(message);
+
+      setServerError(
+        error.response?.data?.message ||
+        error.message ||
+        "Failed to book appointment. Please try again."
+      );
     } finally {
       setLoading(false);
     }
