@@ -10,7 +10,7 @@ const departments = [
   { name: "Orthopedics", icon: Bone, specialists: "14 specialists", services: "Joint replacement · Trauma care", image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=1000", desc: "Specialist support for bones, joints, fractures and sports injuries." },
   { name: "General Surgery", icon: Scissors, specialists: "11 specialists", services: "Laparoscopy · Hernia repair", image: "https://images.unsplash.com/photo-1516549655169-df83a0774514?w=1000", desc: "Safe, precise surgical procedures using modern operating facilities." },
   { name: "Internal Medicine", icon: Stethoscope, specialists: "20 specialists", services: "Screening · Chronic-care support", image: "https://images.unsplash.com/photo-1580281657527-47f249e8f4df?w=1000", desc: "Preventive care, wellness support and chronic disease management for adults." },
-  { name: "Gynecology & Obstetrics", icon: Heart, specialists: "13 specialists", services: "Antenatal care · Delivery · Surgery", image: "https://images.unsplash.com/photo-1516549655669-df83a0774514?w=1000", desc: "Compassionate women's health, maternity and reproductive-care services." },
+  { name: "Obstetrician & Gynaecologist", icon: Heart, specialists: "13 specialists", services: "Antenatal care · Delivery · Surgery", image: "https://images.unsplash.com/photo-1516549655669-df83a0774514?w=1000", desc: "Compassionate women's health, maternity and reproductive-care services." },
   { name: "Ophthalmology", icon: Eye, specialists: "9 specialists", services: "LASIK · Retina care · Cataract surgery", image: "https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=1000", desc: "Advanced eye care, vision correction and specialist treatment." },
 ];
 
