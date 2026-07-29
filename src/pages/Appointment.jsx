@@ -16,10 +16,10 @@ import {
 const doctors = [
   { id: 1, name: "Dr. John Carter", specialty: "Senior Cardiologist" },
   { id: 2, name: "Dr. Sarah Williams", specialty: "Neurologist" },
-  { id: 3, name: "Dr. Michael Smith", specialty: "Pediatrician" },
-  { id: 4, name: "Dr. Emily Brown", specialty: "Orthopedic Surgeon" },
-  { id: 5, name: "Dr. Aisha Khan", specialty: "Gynecologist & Obstetrician" },
-  { id: 6, name: "Dr. David Okon", specialty: "General Physician" },
+  { id: 3, name: "Dr. Mary Khan", specialty: "Pediatrician" },
+  { id: 4, name: "Dr. Carl Brown", specialty: "Orthopedic Surgeon" },
+  { id: 5, name: "Dr. Michael Charles", specialty: "Obstetrician & Gynaecologist" },
+  { id: 6, name: "Dr. Peter martin", specialty: "General Doctor" },
 ];
 
 const Appointment = () => {

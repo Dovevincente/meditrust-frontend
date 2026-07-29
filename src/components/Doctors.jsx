@@ -47,7 +47,7 @@ const doctors = [
   },
   {
     id: 4,
-    name: "Dr. Emily Brown",
+    name: "Dr. Carl Brown",
     specialty: "Orthopedic Surgeon",
     experience: "14+ years",
     qualification: "MBBS, MS (Orthopedics), MCh",
