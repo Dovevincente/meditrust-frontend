@@ -57,8 +57,26 @@ const Hero = () => (
           <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-t from-darkGreen/55 via-transparent" />
           <InfoCard className="-left-10 top-8" icon={<Activity />} title="MRI & Diagnostics" text="Accurate imaging and modern testing." />
           <InfoCard className="-right-8 bottom-8" icon={<HeartPulse />} title="Intensive Care" text="Advanced critical-care support." green />
-          <InfoCard className="-left-8 bottom-36" icon={<Ambulance />} title="Emergency Response" text="Care available around the clock." red />
-        </motion.div>
+<InfoCard
+  className="-left-8 bottom-36"
+  icon={<Ambulance />}
+  title="Emergency Response"
+  text={
+    <>
+      Care available around the clock.
+      <br />
+      <a
+        href="https://wa.me/09113445658?text=Hello%20MediTrust%20Hospital,%20I%20need%20emergency%20medical%20assistance."
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-2 inline-block font-semibold text-black underline hover:text-lemon"
+      >
+        Emergency WhatsApp →
+      </a>
+    </>
+  }
+  red
+/>        </motion.div>
       </div>
     </section>
 

@@ -10,7 +10,7 @@ const contactDetails = [
     primary: "+234 911 344 5658",
     secondary: "24/7 emergency support",
     href: "tel:+234 911 344 5658",
-    href: "https://wa.me/2349113445658",
+    href: "https://wa.me/09113445658",
   },
   {
     icon: Mail,
