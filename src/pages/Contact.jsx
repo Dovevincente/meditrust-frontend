@@ -9,7 +9,7 @@ const contactDetails = [
     title: "Call us",
     primary: "+234 911 344 5658",
     secondary: "24/7 emergency support",
-    href: "tel:+234 911 344 5658",
+    href: "tel:09113445658",
     href: "https://wa.me/09113445658",
   },
   {
