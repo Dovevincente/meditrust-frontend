@@ -7,9 +7,10 @@ const contactDetails = [
   {
     icon: Phone,
     title: "Call us",
-    primary: "+234 800 123 4567",
+    primary: "+234 911 344 5658",
     secondary: "24/7 emergency support",
-    href: "tel:+2348001234567",
+    href: "tel:+234 911 344 5658",
+    href: "https://wa.me/2349113445658",
   },
   {
     icon: Mail,
@@ -234,7 +235,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+234 801 234 5678"
+                      placeholder="+234 900 334 5693"
                     />
                   </div>
 

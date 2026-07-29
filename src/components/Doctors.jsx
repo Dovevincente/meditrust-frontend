@@ -1,14 +1,86 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Award, CalendarCheck, Clock, ShieldCheck, Star, Users } from "lucide-react";
+import doctor1 from "../assets/doctors/doctor1.jpg";
+import doctor2 from "../assets/doctors/doctor2.jpg";
+import doctor3 from "../assets/doctors/doctor3.jpg";
+import doctor4 from "../assets/doctors/doctor4.jpg";
+import doctor5 from "../assets/doctors/doctor5.jpg";
+import doctor6 from "../assets/doctors/doctor6.jpg";
 
 const doctors = [
-  { id: 1, name: "Dr. John Carter", specialty: "Senior Cardiologist", experience: "15+ years", qualification: "MBBS, MD (Cardiology), FACC", image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=900", rating: 4.9, patients: "2,450+", available: true, bio: "Interventional cardiology, preventive heart care, and complex cardiac procedures." },
-  { id: 2, name: "Dr. Sarah Williams", specialty: "Neurologist", experience: "12+ years", qualification: "MBBS, DM (Neurology), FRCP", image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=900", rating: 4.8, patients: "1,890+", available: true, bio: "Stroke management, epilepsy care, and neurodegenerative conditions." },
-  { id: 3, name: "Dr. Michael Smith", specialty: "Pediatrician", experience: "10+ years", qualification: "MBBS, MD (Pediatrics), Neonatology", image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=900", rating: 4.9, patients: "3,100+", available: true, bio: "Dedicated child healthcare, from neonatology to developmental pediatrics." },
-  { id: 4, name: "Dr. Emily Brown", specialty: "Orthopedic Surgeon", experience: "14+ years", qualification: "MBBS, MS (Orthopedics), MCh", image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=900", rating: 4.7, patients: "1,650+", available: false, bio: "Joint replacement, sports injuries, and minimally invasive orthopedic surgery." },
-  { id: 5, name: "Dr. Mary Khan", specialty: "Gynecologist & Obstetrician", experience: "11+ years", qualification: "MBBS, MS (OBGYN), FMAS", image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=900", rating: 4.9, patients: "2,800+", available: true, bio: "Women's health, high-risk pregnancy, and laparoscopic gynaecological surgery." },
-  { id: 6, name: "Dr. Rodriguez Martin", specialty: "General Physician", experience: "18+ years", qualification: "MBBS, MD (Internal Medicine)", image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=900", rating: 4.8, patients: "4,200+", available: true, bio: "Holistic primary care and long-term management of chronic conditions." },
+  {
+    id: 1,
+    name: "Dr. John Carter",
+    specialty: "Senior Cardiologist",
+    experience: "15+ years",
+    qualification: "MBBS, MD (Cardiology), FACC",
+    image: doctor1,
+    rating: 4.9,
+    patients: "2,450+",
+    available: true,
+    bio: "Interventional cardiology, preventive heart care, and complex cardiac procedures.",
+  },
+  {
+    id: 2,
+    name: "Dr. Sarah Williams",
+    specialty: "Neurologist",
+    experience: "12+ years",
+    qualification: "MBBS, DM (Neurology), FRCP",
+    image: doctor2,
+    rating: 4.8,
+    patients: "1,890+",
+    available: true,
+    bio: "Stroke management, epilepsy care, and neurodegenerative conditions.",
+  },
+  {
+    id: 3,
+    name: "Dr. Mary Khan",
+    specialty: "Pediatrician",
+    experience: "10+ years",
+    qualification: "MBBS, MD (Pediatrics), Neonatology",
+    image: doctor3,
+    rating: 4.9,
+    patients: "3,100+",
+    available: true,
+    bio: "Dedicated child healthcare, from neonatology to developmental pediatrics.",
+  },
+  {
+    id: 4,
+    name: "Dr. Emily Brown",
+    specialty: "Orthopedic Surgeon",
+    experience: "14+ years",
+    qualification: "MBBS, MS (Orthopedics), MCh",
+    image: doctor4,
+    rating: 4.7,
+    patients: "1,650+",
+    available: false,
+    bio: "Joint replacement, sports injuries, and minimally invasive orthopedic surgery.",
+  },
+  {
+    id: 5,
+    name: "Dr. Michael Charles",
+    specialty: "Obstetrician & Gynaecologist",
+    experience: "11+ years",
+    qualification: "MBBS, MS (OBGYN), FMAS",
+    image: doctor5,
+    rating: 4.9,
+    patients: "2,800+",
+    available: true,
+    bio: "Women's health, high-risk pregnancy, and laparoscopic gynaecological surgery.",
+  },
+  {
+    id: 6,
+    name: "Dr. Peter Martin",
+    specialty: "General Doctor",
+    experience: "18+ years",
+    qualification: "MBBS, MD (Internal Medicine)",
+    image: doctor6,
+    rating: 4.8,
+    patients: "4,200+",
+    available: true,
+    bio: "Holistic primary care and long-term management of chronic conditions.",
+  },
 ];
 
 const Doctors = () => <section id="doctors" className="overflow-hidden bg-white py-24"><div className="mx-auto max-w-7xl px-6">
