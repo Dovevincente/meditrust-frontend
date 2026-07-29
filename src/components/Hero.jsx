@@ -73,7 +73,7 @@ const Hero = () => (
     </section>
 
     <a href="tel:+2348001234567" className="fixed bottom-6 right-6 z-50 inline-flex items-center gap-3 rounded-full bg-red-600 px-5 py-3 font-semibold text-white shadow-2xl transition hover:scale-105">
-      <Ambulance size={22} /><span>Emergency: +234 800 123 4567</span>
+      <Ambulance size={22} /><span>Emergency: +234 911 344 5658</span>
     </a>
   </main>
 );
